@@ -1,0 +1,63 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'DM Sans', sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+
+h1 {
+    text-align: center;
+}
+
+form {
+    border: 1px solid black;
+    max-width: 400px;
+    font-size: 0.8rem;
+    margin: 0 auto;
+}
+
+.input-group {
+    padding: 4px;
+    margin: 4px;
+}
+
+.input-group input {
+    margin-top: 4px;
+}
+
+.input-group select {
+    margin-top: 8px;
+}
+
+.input-group  p{
+    font-size: 0.6rem;
+}
+
+.button-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button-container button {
+    width: 60%;
+    margin: 2px;
+}
+
+.message-error {
+    color: red;
+    opacity: 0;
+    transition: all linear 0.5s;
+}
+.message-error.invalid {
+    opacity: 1;
+}
+
+
+
+

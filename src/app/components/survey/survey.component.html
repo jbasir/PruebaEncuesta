@@ -1,0 +1,177 @@
+<h1> Encuesta</h1>
+<div *ngIf="!completed">
+    <form (ngSubmit)="localFormSave()" #myForm="ngForm">
+    <section>
+        <div class="input-group">
+        <label for="email">¿Cual es tu correo?</label><br>
+        <input type="text" name="email" required #emailInput="ngModel" id="email" placeholder="tucorreo@gmail.com" [(ngModel)]="form.email" />
+        <p class="message-error" [ngClass]="{
+            'valid': emailInput.valid,
+            'invalid': emailInput.invalid
+        }"
+        >Campo requerido</p>
+        </div>
+    
+        <div class="input-group">
+        <label for="age">¿En que rango comprende tu edad?</label><br>
+        <select name="age" required #ageInput="ngModel" id="age" placeholder="edad" [(ngModel)]="form.age">
+            <option value="">Selecciona una opción</option>
+            <option>18 - 25</option>
+            <option>26 - 33</option>
+            <option>34 - 40</option>
+            <option>40 +</option>
+        </select>
+        <p class="message-error" [ngClass]="{
+            'valid': ageInput.valid,
+            'invalid': ageInput.invalid
+        }"
+        >Campo requerido</p>
+        </div>
+    
+        <div class="input-group">
+        <label for="sex">¿Cual es tu sexo?</label><br>
+        <select name="sex" required #sexInput="ngModel" id="sex" placeholder="sexo" [(ngModel)]="form.sex">
+            <option value="">Selecciona una opción</option>
+            <option>Masculino</option>
+            <option>Femenino</option>
+        </select>
+        <p class="message-error" [ngClass]="{
+            'valid': sexInput.valid,
+            'invalid': sexInput.invalid
+        }"
+        >Campo requerido</p>
+        </div>
+    
+        <div class="input-group">
+        <label for="socialMedia">¿Cual es tu Red Social Favorito?</label><br>
+        <select name="socialMedia" required #socialMediaInput="ngModel" id="socialMedia" placeholder="red social" [(ngModel)]="form.socialMedia">
+            <option value="">Selecciona una opción</option>
+            <option>Facebook</option>
+            <option>Whatsapp</option>
+            <option>Twitter</option>
+            <option>Instagram</option>
+            <option>Tiktok</option>
+        </select>
+        <p class="message-error" [ngClass]="{
+            'valid': socialMediaInput.valid,
+            'invalid': socialMediaInput.invalid
+        }"
+        >Campo requerido</p>
+        </div>
+    </section>
+    
+    <section>
+        <div class="input-group">
+        <label for="timeFb">¿Cual es tu Tiempo promedio de uso de día Facebook?</label><br>
+        <select name="timeFb" required #timeFbInput="ngModel" id="timeFb" [(ngModel)]="form.timeFb">
+            <option value="">Selecciona una opción</option>
+            <option>No uso Facebook</option>
+            <option>0min - 30min</option>
+            <option>30min - 1h</option>
+            <option>1h - 2h</option>
+            <option>3h - 4h</option>
+            <option>5h - 6h</option>
+            <option>7h - 8h</option>
+            <option>Mas de 8 horas</option>
+        </select>
+        <p class="message-error" [ngClass]="{
+            'valid': timeFbInput.valid,
+            'invalid': timeFbInput.invalid
+        }"
+        >Campo requerido</p>
+        </div>
+    
+        <div class="input-group">
+        <label for="timeWs">¿Cual es tu Tiempo promedio de uso de día Whatsapp?</label><br>
+        <select name="timeWs" required #timeWsInput="ngModel" id="timeWs" [(ngModel)]="form.timeWs">
+            <option value="">Selecciona una opción</option>
+            <option>No uso Whatsapp</option>
+            <option>0min - 30min</option>
+            <option>30min - 1h</option>
+            <option>1h - 2h</option>
+            <option>3h - 4h</option>
+            <option>5h - 6h</option>
+            <option>7h - 8h</option>
+            <option>Mas de 8 horas</option>
+        </select>
+        <p class="message-error" [ngClass]="{
+            'valid': timeWsInput.valid,
+            'invalid': timeWsInput.invalid
+        }"
+        >Campo requerido</p>
+        </div>
+    
+        <div class="input-group">
+        <label for="timetw">¿Cual es tu Tiempo promedio de uso de día Twitter?</label><br>
+        <select name="timeTw" required #timeTwInput="ngModel" id="timeTw" [(ngModel)]="form.timeTw">
+            <option value="">Selecciona una opción</option>
+            <option>No uso Twitter</option>
+            <option>0min - 30min</option>
+            <option>30min - 1h</option>
+            <option>1h - 2h</option>
+            <option>3h - 4h</option>
+            <option>5h - 6h</option>
+            <option>7h - 8h</option>
+            <option>Mas de 8 horas</option>
+        </select>
+        <p class="message-error" [ngClass]="{
+            'valid': timeTwInput.valid,
+            'invalid': timeTwInput.invalid
+        }"
+        >Campo requerido</p>
+        </div>
+    
+        <div class="input-group">
+        <label for="timetw">¿Cual es tu Tiempo promedio de uso de día Instagram?</label><br>
+        <select name="timeIg" required #timeIgInput="ngModel" id="timeIg" [(ngModel)]="form.timeIg">
+            <option value="">Selecciona una opción</option>
+            <option>No uso Instagram</option>
+            <option>0min - 30min</option>
+            <option>30min - 1h</option>
+            <option>1h - 2h</option>
+            <option>3h - 4h</option>
+            <option>5h - 6h</option>
+            <option>7h - 8h</option>
+            <option>Mas de 8 horas</option>
+        </select>
+        <p class="message-error" [ngClass]="{
+            'valid': timeIgInput.valid,
+            'invalid': timeIgInput.invalid
+        }"
+        >Campo requerido</p>
+        </div>
+    
+        <div class="input-group">
+        <label for="timeTik">¿Cual es tu Tiempo promedio de uso de día Tiktok?</label><br>
+        <select name="timeTik" required #timeTikInput="ngModel" id="timeTik" [(ngModel)]="form.timeTik">
+            <option value="">Selecciona una opción</option>
+            <option>No uso TikTok</option>
+            <option>0min - 30min</option>
+            <option>30min - 1h</option>
+            <option>1h - 2h</option>
+            <option>3h - 4h</option>
+            <option>5h - 6h</option>
+            <option>7h - 8h</option>
+            <option>Mas de 8 horas</option>
+        </select>
+        <p class="message-error" [ngClass]="{
+            'valid': timeTikInput.valid,
+            'invalid': timeTikInput.invalid
+        }"
+        >Campo requerido</p>
+        </div>
+    
+    </section>
+    <div class="button-container">
+        <button [disabled]="myForm.invalid" type="submit">Enviar</button>
+    </div>
+    </form>
+</div>
+<div *ngIf="completed">
+    <h2>
+        Gracias
+    </h2>
+    <button (click)="redirectStatistics()">
+        Ir a Estadísticas
+    </button>
+</div>

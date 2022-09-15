@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
+import { StatisticsService } from './statistics.service';
 
 @Component({
   selector: 'app-statistics',
   templateUrl: './statistics.component.html',
   styleUrls: ['./statistics.component.css']
 })
-export class StatisticsComponent  {
+export class StatisticsComponent  implements OnInit{
   view: [number, number] = [700, 400];
 
   // options
@@ -37,8 +38,14 @@ export class StatisticsComponent  {
     }
   ];
 
-  constructor() {
-    //Object.assign(this, { single });
+  registers : any;
+
+  constructor(private statisticsService: StatisticsService) {
+
+  }
+
+  ngOnInit(): void {
+    this.getSurvey();
   }
 
   onSelect(data: any): void {
@@ -53,4 +60,15 @@ export class StatisticsComponent  {
     console.log('Deactivate', JSON.parse(JSON.stringify(data)));
   }
 
+  getSurvey() : void {
+    this.statisticsService.getRegister().subscribe((res: any) => {
+      this.registers = res;
+      console.log(this.registers)
+      let localRegisters = localStorage.getItem('completedForm');
+      if(localRegisters) localRegisters = JSON.parse(localRegisters);
+      console.log('local',localRegisters);
+      this.registers.push(localRegisters);
+      console.log('final', this.registers)
+    })
+  }
 }

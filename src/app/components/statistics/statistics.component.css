@@ -1,0 +1,6 @@
+.statistics-container {
+    border: 1px solid black;
+    max-width: 900px;
+    font-size: 0.8rem;
+    margin: 0 auto;
+}
