@@ -2,7 +2,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'DM Sans', sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 html {
@@ -12,13 +12,19 @@ html {
 
 h1 {
     text-align: center;
+    text-align: center;
+    background-color: #69ccde;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+h2 {
+    padding: 32px;
 }
 
 form {
-    border: 1px solid black;
     max-width: 400px;
     font-size: 0.8rem;
     margin: 0 auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
 }
 
 .input-group {
@@ -38,6 +44,10 @@ form {
     font-size: 0.6rem;
 }
 
+.input-group  label{
+    font-weight: bold;
+}
+
 .button-container {
     display: flex;
     align-items: center;
@@ -46,7 +56,9 @@ form {
 
 .button-container button {
     width: 60%;
-    margin: 2px;
+    height: 32px;
+    margin: 8px;
+    font-weight: bold;
 }
 
 .message-error {
@@ -58,6 +70,22 @@ form {
     opacity: 1;
 }
 
+.message-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 400px;
+    font-size: 0.8rem;
+    margin: 0 auto;
+    background-color: #69ccde;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.message-container button {
+    padding: 16px;
+    font-weight: bold;
+}
 
 
 

@@ -9,23 +9,52 @@ html {
     font-size: 62.5%;
 }
 
+h1 {
+    text-align: center;
+    text-align: center;
+    background-color: #69ccde;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
 .data-container {
     display: flex;
     margin: 4px;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     text-align: center;
+}
+
+section {
+    height: 110px;
+}
+.section-respondidas h4 {
+    font-size: 3.2rem;
+}
+
+.avg-container ul li {
+    list-style: none;
+}
+
+section h3 {
+    margin-bottom: 8px;
+    
 }
 
 section h4 {
     color: red;
+    
 }
 
-
 .statistics-container {
-    border: 1px solid black;
-    max-width: 900px;
+    max-width: 700px;
     font-size: 0.8rem;
     margin: 0 auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.statistics-container h3 {
+    text-align: center;
+    padding-top: 32px;
+    font-size: 1.2rem;
 }
 

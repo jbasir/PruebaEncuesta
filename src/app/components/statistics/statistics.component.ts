@@ -48,6 +48,7 @@ export class StatisticsComponent  implements OnInit{
   public arrayPlusAvgIg: any;
   public arrayPlusAvgTik: any;
   public chartResults1: any;
+  
 
   constructor(private statisticsService: StatisticsService) {
 
@@ -94,6 +95,7 @@ export class StatisticsComponent  implements OnInit{
       this.socialMediaTimeTw()
       this.socialMediaTimeIg()
       this.socialMediaTimeTik()
+      this.getRange26()
     })
   }
 
@@ -219,9 +221,20 @@ socialMediaArray : any = []
   }
 
   //• Red social menos querida
-  
+
   //• Rango de edad que más use cada red social (ejemplo: Facebook entre 18-25 e Instagram entre 26-33)
 
-
+  objects26: any
+  timeFb26: any
+  getRange26() {
+    let objects26 = this.registers.filter (obj => {
+      return obj.age == "26 - 33";
+    })
+    
+    console.log('ojects26',objects26);
+  }
 }
+
+  
+
 

@@ -19,7 +19,7 @@
             <option>18 - 25</option>
             <option>26 - 33</option>
             <option>34 - 40</option>
-            <option>40 +</option>
+            <option>40+</option>
         </select>
         <p class="message-error" [ngClass]="{
             'valid': ageInput.valid,
@@ -171,11 +171,14 @@
     </div>
     </form>
 </div>
-<div *ngIf="completed">
+<br>
+<div class="message-container" *ngIf="completed">
+    <br>
     <h2>
-        Gracias
+        Encuesta enviada ✔
     </h2>
     <button (click)="redirectStatistics()">
         Ir a Estadísticas
     </button>
+    <br>
 </div>

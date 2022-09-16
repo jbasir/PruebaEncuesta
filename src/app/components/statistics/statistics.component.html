@@ -1,37 +1,31 @@
 <h1>Estadísticas</h1>
+<br>
 <div class="data-container">
-  <section>
+  <section class="section-respondidas">
     <h3>Cantidad de encuestas respondidas</h3>
     <h4>{{ numberSurveys }}</h4>
   </section>
   <section>
     <h3>Tiempo promedio por red social</h3>
-    <div>
+    <div class="avg-container">
       <ul>
-        <li><h4>Facebook: {{ arrayPlusAvgFb }} horas de AVG</h4></li>
-        <li><h4>Whatsapp: {{ arrayPlusAvgWs }} horas de AVG</h4></li>
-        <li><h4>Twitter: {{ arrayPlusAvgTw }} horas de AVG</h4></li>
-        <li><h4>Instagram: {{ arrayPlusAvgIg }} horas de AVG</h4></li>
-        <li><h4>Tiktok: {{ arrayPlusAvgTik }} horas de AVG</h4></li>
+        <li><h4>Facebook - {{ arrayPlusAvgFb }} horas de AVG</h4></li>
+        <li><h4>Whatsapp - {{ arrayPlusAvgWs }} horas de AVG</h4></li>
+        <li><h4>Twitter - {{ arrayPlusAvgTw }} horas de AVG</h4></li>
+        <li><h4>Instagram: - {{ arrayPlusAvgIg }} horas de AVG</h4></li>
+        <li><h4>Tiktok: - {{ arrayPlusAvgTik }} horas de AVG</h4></li>
       </ul>
     </div>
-    
-  </section>
-  <section>
-    <h3>Red social favorita</h3>
-    <h4></h4>
-  </section>
-  <section>
-    <h3>Red social menos querida</h3>
-    <h4></h4>
   </section>
   <section>
     <h3>Rango de edad que mas utiliza cada red social</h3>
     <h4></h4>
   </section>
 </div>
+<br>
 
 <div class="statistics-container">
+  <h3>Redes sociales favoritas y menos queridas</h3>
     <ngx-charts-advanced-pie-chart
     [view]="view"
     [results]="chartResults1"
