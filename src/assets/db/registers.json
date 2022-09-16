@@ -4,109 +4,109 @@
         "age": "26 - 33",
         "sex": "Masculino",
         "socialMedia": "Facebook",
-        "timeFb": "30min - 1h",
-        "timeWs": "30min - 1h",
-        "timeTw": "0min - 30min",
-        "timeIg": "1h - 2h",
-        "timeTik": "No uso TikTok"
+        "timeFb": 1,
+        "timeWs": 2,
+        "timeTw": 0,
+        "timeIg": 4,
+        "timeTik": 5
     },
     {
         "email": "ana@gmail.com",
         "age": "26 - 30",
         "sex": "Femenino",
         "socialMedia": "Instagram",
-        "timeFb": "1h - 2h",
-        "timeWs": "1h - 2h",
-        "timeTw": "1h - 2h",
-        "timeIg": "1h - 2h",
-        "timeTik": "1h - 2h"
+        "timeFb": 2,
+        "timeWs": 3,
+        "timeTw": 0,
+        "timeIg": 3,
+        "timeTik": 3
     },
     {
         "email": "jose@gmail.com",
         "age": "34 - 40",
         "sex": "Masculino",
-        "socialMedia": "Twitter",
-        "timeFb": "1h - 2h",
-        "timeWs": "1h - 2h",
-        "timeTw": "3h - 4h",
-        "timeIg": "3h - 4h",
-        "timeTik": "1h - 2h"
+        "socialMedia": "Instagram",
+        "timeFb": 3,
+        "timeWs": 4,
+        "timeTw": 1,
+        "timeIg": 5,
+        "timeTik": 3
     },
     {
         "email": "pepe@gmail.com",
         "age": "40 +",
         "sex": "Masculino",
         "socialMedia": "Whatsapp",
-        "timeFb": "3h - 4h",
-        "timeWs": "3h - 4h",
-        "timeTw": "30min - 1h",
-        "timeIg": "No uso Instagram",
-        "timeTik": "No uso TikTok"
+        "timeFb": 4,
+        "timeWs": 5,
+        "timeTw": 0,
+        "timeIg": 3,
+        "timeTik": 3
     },
     {
         "email": "maria@gmail.com",
         "age": "18 - 25",
         "sex": "Femenino",
         "socialMedia": "Tiktok",
-        "timeFb": "No uso Facebook",
-        "timeWs": "2h - 3h",
-        "timeTw": "30min - 1h",
-        "timeIg": "2h - 3h",
-        "timeTik": "Mas de 8 horas"
+        "timeFb": 0,
+        "timeWs": 6,
+        "timeTw": 0,
+        "timeIg": 3,
+        "timeTik": 0
     },
     {
         "email": "carlos@gmail.com",
         "age": "34 - 40",
         "sex": "Masculino",
-        "socialMedia": "Whatsapp",
-        "timeFb": "1h - 2h",
-        "timeWs": "2h - 3h",
-        "timeTw": "No uso Twitter",
-        "timeIg": "4h - 5h",
-        "timeTik": "5h - 6h"
+        "socialMedia": "Tiktok",
+        "timeFb": 1,
+        "timeWs": 3,
+        "timeTw": 1,
+        "timeIg": 2,
+        "timeTik": 2
     },
     {
         "email": "pedro@gmail.com",
         "age": "18 - 25",
         "sex": "Masculino",
-        "socialMedia": "Whatsapp",
-        "timeFb": "2h - 3h",
-        "timeWs": "Mas de 8 horas",
-        "timeTw": "1h - 2h",
-        "timeIg": "No uso Instagram",
-        "timeTik": "30min - 1h"
+        "socialMedia": "Tiktok",
+        "timeFb": 2,
+        "timeWs": 3,
+        "timeTw": 0,
+        "timeIg": 3,
+        "timeTik": 5
     },
     {
         "email": "juan@gmail.com",
         "age": "40 +",
         "sex": "Masculino",
-        "socialMedia": "Whatsapp",
-        "timeFb": "30min - 1h",
-        "timeWs": "1h - 2h",
-        "timeTw": "No uso Twitter",
-        "timeIg": "No uso Instagram",
-        "timeTik": "No uso TikTok"
+        "socialMedia": "Tiktok",
+        "timeFb": 1,
+        "timeWs": 4,
+        "timeTw": 0,
+        "timeIg": 5,
+        "timeTik": 2
     },
     {
         "email": "rosa@gmail.com",
         "age": "40 +",
         "sex": "Femenino",
         "socialMedia": "Whatsapp",
-        "timeFb": "1h - 2h",
-        "timeWs": "1h - 2h",
-        "timeTw": "No uso Twitter",
-        "timeIg": "1h - 2h",
-        "timeTik": "1h - 2h"
+        "timeFb": 2,
+        "timeWs": 4,
+        "timeTw": 0,
+        "timeIg": 3,
+        "timeTik": 3
     },
     {
         "email": "andres@gmail.com",
         "age": "18 - 25",
         "sex": "Masculino",
         "socialMedia": "Instagram",
-        "timeFb": "30min - 1h",
-        "timeWs": "30min - 1h",
-        "timeTw": "No uso Twitter",
-        "timeIg": "Mas de 8 horas",
-        "timeTik": "30min - 1h"
+        "timeFb": 1,
+        "timeWs": 2,
+        "timeTw": 0,
+        "timeIg": 1,
+        "timeTik": 1
     }
 ]

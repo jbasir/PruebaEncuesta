@@ -1,6 +1,31 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'DM Sans', sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+.data-container {
+    display: flex;
+    margin: 4px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+section h4 {
+    color: red;
+}
+
+
 .statistics-container {
     border: 1px solid black;
     max-width: 900px;
     font-size: 0.8rem;
     margin: 0 auto;
 }
+

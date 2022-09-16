@@ -1,9 +1,40 @@
 <h1>Estadísticas</h1>
+<div class="data-container">
+  <section>
+    <h3>Cantidad de encuestas respondidas</h3>
+    <h4>{{ numberSurveys }}</h4>
+  </section>
+  <section>
+    <h3>Tiempo promedio por red social</h3>
+    <div>
+      <ul>
+        <li><h4>Facebook: {{ arrayPlusAvgFb }} horas de AVG</h4></li>
+        <li><h4>Whatsapp: {{ arrayPlusAvgWs }} horas de AVG</h4></li>
+        <li><h4>Twitter: {{ arrayPlusAvgTw }} horas de AVG</h4></li>
+        <li><h4>Instagram: {{ arrayPlusAvgIg }} horas de AVG</h4></li>
+        <li><h4>Tiktok: {{ arrayPlusAvgTik }} horas de AVG</h4></li>
+      </ul>
+    </div>
+    
+  </section>
+  <section>
+    <h3>Red social favorita</h3>
+    <h4></h4>
+  </section>
+  <section>
+    <h3>Red social menos querida</h3>
+    <h4></h4>
+  </section>
+  <section>
+    <h3>Rango de edad que mas utiliza cada red social</h3>
+    <h4></h4>
+  </section>
+</div>
 
 <div class="statistics-container">
     <ngx-charts-advanced-pie-chart
     [view]="view"
-    [results]="single"
+    [results]="chartResults1"
     [gradient]="gradient"
     (select)="onSelect($event)"
     (activate)="onActivate($event)"

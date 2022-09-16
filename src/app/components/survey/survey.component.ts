@@ -8,12 +8,7 @@ import { Router } from '@angular/router';
 })
 export class SurveyComponent {
 
-  constructor(private router: Router) {
-
-  }
-  title = 'prueba-encuesta';
-  public completed = false;
-  form = {
+  public form = {
     email: '',
     age: '',  
     sex: '',
@@ -25,9 +20,18 @@ export class SurveyComponent {
     timeTik: '',
   }
 
+  constructor(private router: Router) {
+
+  }
+  title = 'prueba-encuesta';
+  public completed = false;
+
+
   formData = ''
 
   localFormSave() {
+    console.log(this.form)
+    //this.form.timeFb = parseInt(this.form.timeFb)
     localStorage.setItem('completedForm', JSON.stringify(this.form));
     this.completed = true;
   }
