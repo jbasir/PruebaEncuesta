@@ -1,5 +1,8 @@
 <h1>Estadísticas</h1>
 <br>
+<div class="button-container">
+  <button (click)="redirectSurvey()">Responder encuesta nuevamente</button>
+</div>
 <div class="data-container">
   <section class="section-respondidas">
     <h3>Cantidad de encuestas respondidas</h3>
@@ -34,10 +37,41 @@
     [view]="view"
     [results]="chartResults1"
     [gradient]="gradient"
-    (select)="onSelect($event)"
-    (activate)="onActivate($event)"
-    (deactivate)="onDeactivate($event)"
     >
   </ngx-charts-advanced-pie-chart>
 </div>
-
+<br>
+<br>
+<h3 style="text-align: center">Tabla de resultados de encuestados</h3>
+<div class="table-container">
+  <table>
+    <thead>
+      <tr>
+        <th class="cell-pad">ID</th>
+        <th class="cell-pad">Correo</th>
+        <th class="cell-pad">Genero</th>
+        <th class="cell-pad">Edad</th>
+        <th class="cell-pad">Red social favorita</th>
+        <th class="cell-pad">H. Facebook</th>
+        <th class="cell-pad">H. Whatsapp</th>
+        <th class="cell-pad">H. Twitter</th>
+        <th class="cell-pad">H. Instagram</th>
+        <th class="cell-pad">H. Tiktok</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let register of registers, index as i">
+        <td class="cell-pad">{{ i + 1 }}</td>
+        <td class="cell-pad">{{ register['email'] }}</td>
+        <td class="cell-pad">{{ register['sex'] }}</td>
+        <td class="cell-pad">{{ register['age'] }}</td>
+        <td class="cell-pad">{{ register['socialMedia'] }}</td>
+        <td class="cell-pad">{{ register['timeFb'] }}</td>
+        <td class="cell-pad">{{ register['timeWs'] }}</td>
+        <td class="cell-pad">{{ register['timeTw'] }}</td>
+        <td class="cell-pad">{{ register['timeIg'] }}</td>
+        <td class="cell-pad">{{ register['timeTik'] }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

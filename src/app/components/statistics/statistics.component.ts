@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-// import { ConsoleReporter } from 'jasmine';
+import { Router } from '@angular/router';
 import { StatisticsService } from './statistics.service';
 
 @Component({
@@ -11,34 +11,8 @@ import { StatisticsService } from './statistics.service';
 export class StatisticsComponent  implements OnInit{
   view: [number, number] = [700, 400];
 
-  // options
+  // chart options
   gradient: boolean = true;
-  showLegend: boolean = true;
-  showLabels: boolean = true;
-  isDoughnut: boolean = false;
-
-   colorScheme = {
-    domain: ['#5AA454', '#A10A28', '#C7B42C', '#AAAAAA']
-  };
-
-  single = [
-    {
-      "name": "Germany",
-      "value": 8940000
-    },
-    {
-      "name": "USA",
-      "value": 5000000
-    },
-    {
-      "name": "France",
-      "value": 7200000
-    },
-      {
-      "name": "UK",
-      "value": 6200000
-    }
-  ];
 
   public registers : any;
   public numberSurveys : any;
@@ -57,52 +31,36 @@ export class StatisticsComponent  implements OnInit{
   }
   
 
-  constructor(private statisticsService: StatisticsService) {
-
-  }
+  constructor(private statisticsService: StatisticsService, private router: Router) {}
 
   ngOnInit(): void {
     this.getSurvey();
   }
 
-  onSelect(data: any): void {
-    console.log('Item clicked', JSON.parse(JSON.stringify(data)));
-  }
-
-  onActivate(data: any): void {
-    console.log('Activate', JSON.parse(JSON.stringify(data)));
-  }
-
-  onDeactivate(data: any): void {
-    console.log('Deactivate', JSON.parse(JSON.stringify(data)));
-  }
-
   getSurvey() : void {
     this.statisticsService.getRegister().subscribe((res: any) => {
       this.registers = res;
-      let localRegisters = localStorage.getItem('completedForm');
-      if(localRegisters) {
-        localRegisters = JSON.parse(localRegisters);
-        if( localRegisters !== null){
-          // Corvirtiendo campos a numeros
-          localRegisters['timeFb'] = parseInt(localRegisters['timeFb']);
-          localRegisters['timeWs'] = parseInt(localRegisters['timeWs']);
-          localRegisters['timeTw'] = parseInt(localRegisters['timeTw']);
-          localRegisters['timeIg'] = parseInt(localRegisters['timeIg']);
-          localRegisters['timeTik'] = parseInt(localRegisters['timeTik']);
-        }
+      let localRegisters = [];
+      const result = localStorage.getItem('completedForm');
+      if(result && result != null){
+        localRegisters = JSON.parse('[' + result + ']')
       }
-      this.registers.push(localRegisters);
-      console.log('final', this.registers)
+      Object.keys(localRegisters).forEach((key) => {
+        localRegisters[key]['timeFb'] = parseInt(localRegisters[key]['timeFb']);
+        localRegisters[key]['timeWs'] = parseInt(localRegisters[key]['timeWs']);
+        localRegisters[key]['timeTw'] = parseInt(localRegisters[key]['timeTw']);
+        localRegisters[key]['timeIg'] = parseInt(localRegisters[key]['timeIg']);
+        localRegisters[key]['timeTik'] = parseInt(localRegisters[key]['timeTik']);
+        this.registers.push(localRegisters[key])
+      })
       this.amountSurveys();
-      this.favSocialMedia()
-      this.socialMediaReport()
-      this.socialMediaTimeFb()
-      this.socialMediaTimeWs()
-      this.socialMediaTimeTw()
-      this.socialMediaTimeIg()
-      this.socialMediaTimeTik()
-      this.getRanges()
+      this.socialMediaReport();
+      this.socialMediaTimeFb();
+      this.socialMediaTimeWs();
+      this.socialMediaTimeTw();
+      this.socialMediaTimeIg();
+      this.socialMediaTimeTik();
+      this.getRanges();
     })
   }
 
@@ -124,7 +82,7 @@ export class StatisticsComponent  implements OnInit{
      }
      let arrayPlusAvg = (arrayPlusH / lengthH)
      this.arrayPlusAvgFb = arrayPlusAvg.toFixed(1)
-    }
+  }
   
   //Whastapp AVG
   socialMediaTimeWs() : void {
@@ -136,7 +94,7 @@ export class StatisticsComponent  implements OnInit{
       }
       let arrayPlusAvg = (arrayPlusH / lengthH)
       this.arrayPlusAvgWs = arrayPlusAvg.toFixed(1)
-    }
+  }
 
   //Twitter AVG
   socialMediaTimeTw() : void {
@@ -148,7 +106,7 @@ export class StatisticsComponent  implements OnInit{
      }
      let arrayPlusAvg = (arrayPlusH / lengthH)
      this.arrayPlusAvgTw = arrayPlusAvg.toFixed(1)
-    }
+  }
 
   //Instagram AVG
   socialMediaTimeIg() : void {
@@ -160,7 +118,7 @@ export class StatisticsComponent  implements OnInit{
      }
      let arrayPlusAvg = (arrayPlusH / lengthH)
      this.arrayPlusAvgIg = arrayPlusAvg.toFixed(1)
-    } 
+  } 
 
     //Tiktok AVG
   socialMediaTimeTik() : void {
@@ -172,22 +130,11 @@ export class StatisticsComponent  implements OnInit{
      }
      let arrayPlusAvg = (arrayPlusH / lengthH)
      this.arrayPlusAvgTik = arrayPlusAvg.toFixed(1)
-    }  
+  }  
 
   //• Red social favorita
   //• Red social menos querida
 
-socialMediaArray : any = [] 
-   favSocialMedia() : void {
-     this.registers.forEach(item => {
-      this.socialMediaArray.push(item.socialMedia);
-      this.socialMediaArray.sort();
-
-     })
-
-
-   }
-   rta : any;
   socialMediaReport() {
     let rta = this.registers
     .map(item => item.socialMedia)
@@ -330,6 +277,10 @@ socialMediaArray : any = []
     if(time40['timeTw'] > time18['timeTw'] && time40['timeTw'] > time26['timeTw'] && time40['timeTw'] > time34['timeTw']) this.moreUsed['twitter'] = '40+';
 
     console.log(time18, time26, time34, time40)
+  }
+
+  public redirectSurvey(): void {
+    this.router.navigate(['/']);
   }
 }
 

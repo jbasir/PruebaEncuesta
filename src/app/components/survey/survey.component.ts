@@ -32,7 +32,15 @@ export class SurveyComponent {
   localFormSave() {
     console.log(this.form)
     //this.form.timeFb = parseInt(this.form.timeFb)
-    localStorage.setItem('completedForm', JSON.stringify(this.form));
+    const result = localStorage.getItem('completedForm')
+    let finalLocalRegisters = '';
+    if(result && result != null){
+      finalLocalRegisters = result + ',' + JSON.stringify(this.form)
+    }else{
+      finalLocalRegisters = JSON.stringify(this.form)
+    }
+
+    localStorage.setItem('completedForm', finalLocalRegisters);
     this.completed = true;
   }
 
