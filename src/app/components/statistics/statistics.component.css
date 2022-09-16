@@ -9,13 +9,18 @@ html {
     font-size: 62.5%;
 }
 
-h1 {
-    text-align: center;
-    text-align: center;
-    background-color: #69ccde;
+header {
+    display: flex;
+    background: #69ccde;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    align-items: center;
+    justify-content: space-around;
 }
 
+header h1 {
+    text-align: center;
+
+}
 .data-container {
     display: flex;
     margin: 4px;
@@ -25,7 +30,9 @@ h1 {
 }
 
 section {
-    height: 110px;
+    height: 140px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 8px;
 }
 .section-respondidas h4 {
     font-size: 3.2rem;
@@ -41,7 +48,7 @@ section h3 {
 }
 
 section h4 {
-    color: red;
+    color: #c2738d;
     
 }
 
@@ -68,6 +75,25 @@ section h4 {
 }
 
 .cell-pad{
+    border: 1px solid #c2738d;
     padding: 10px
 }
+.button-container {
+    display: flex;
+    justify-content: flex-end;
+}
+.button-container button {
+    background: #1f53c5;
+    border: none;
+    padding: 12px;
+    color: white;
+    margin: 16px 0;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.button-container button:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
 

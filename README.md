@@ -1,27 +1,13 @@
-# PruebaEncuesta
+# PruebaEncuesta - Prueba realizado por Javier Basir
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.2.
 
-## Development server
+## PASOS PARA INSTALAR Y EJECUTAR LA APLICACION LOCAL
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+PASO 1: TENER INSTALADO NODEJS 14.15 O SUPERIOR Y NPM
+PASO 2: INSTALAR CLI DE ANGULAR CON EL SIGUIENTE COMANDO npm i –g @angular/cli
+PASO 3: CLONAR RAMA MASTER DEL REPOSITORIO A SU EQUIPO LOCAL - REPOSTIORIO: https://github.com/jbasir/PruebaEncuesta
+PASO 4: CREAR UN SERVIDOR PARA PODER VER EL PROYECTO EN EL NAVEGADOR CON EL SIGUIENTE COMANDO ng serve
+PASO 5: INGRESAR A LA DIRECCION QUE REGRESE EL COMANDO ng serve CON SU NAVEGADOR
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.

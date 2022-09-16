@@ -1,14 +1,17 @@
-<h1>Estadísticas</h1>
+<header>
+  <h1>Estadísticas</h1>
+  <div class="button-container">
+    <button (click)="redirectSurvey()">Responder encuesta nuevamente</button>
+  </div>
+</header>
 <br>
-<div class="button-container">
-  <button (click)="redirectSurvey()">Responder encuesta nuevamente</button>
-</div>
+
 <div class="data-container">
   <section class="section-respondidas">
     <h3>Cantidad de encuestas respondidas</h3>
     <h4>{{ numberSurveys }}</h4>
   </section>
-  <section>
+  <section class="section-promedio">
     <h3>Tiempo promedio por red social</h3>
     <div class="avg-container">
       <ul>
@@ -43,6 +46,7 @@
 <br>
 <br>
 <h3 style="text-align: center">Tabla de resultados de encuestados</h3>
+<br>
 <div class="table-container">
   <table>
     <thead>

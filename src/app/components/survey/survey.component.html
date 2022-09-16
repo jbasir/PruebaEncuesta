@@ -1,4 +1,4 @@
-<h1> Encuesta</h1>
+<h1> Encuesta</h1><br>
 <div *ngIf="!completed">
     <form (ngSubmit)="localFormSave()" #myForm="ngForm">
     <section>
@@ -148,6 +148,7 @@
         <div class="input-group">
         <label for="timeTik">¿Cual es tu Tiempo promedio de uso de día Tiktok?</label><br>
         <select name="timeTik" required #timeTikInput="ngModel" id="timeTik" [(ngModel)]="form.timeTik">
+            <option value="">Selecciona una opción</option>
             <option>0 <span>horas</span></option>
             <option>1 <span>hora</span></option>
             <option>2 <span>horas</span></option>
@@ -172,7 +173,7 @@
     </form>
 </div>
 <br>
-<div class="message-container" *ngIf="completed">
+<div class="button-message-container" *ngIf="completed">
     <br>
     <h2>
         Encuesta enviada ✔
