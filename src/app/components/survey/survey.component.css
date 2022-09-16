@@ -9,11 +9,16 @@ html {
     font-size: 62.5%;
 }
 
-
-h1 {
+header {
+    display: flex;
+    align-content: center;
+    justify-content: space-around;
     text-align: center;
     background-color: #69ccde;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.titulo {
+    font-size: 1.8rem;
 }
 h2 {
     padding: 32px;
